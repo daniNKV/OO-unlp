@@ -5,20 +5,20 @@ public interface WallPost {
 	/**
 	 * Retorna el texto descriptivo de la publicación
 	 * 
-	 * @return
+	 * @return string
 	 */
 	String getText();
 	
 	/**
 	 * Setea el texto descriptivo de la publicación
-	 * @param text
+	 * @param string text
 	 */
 	void setText(String text);
 	
 	/**
 	 * Retorna la cantidad de “me gusta”
 	 * 
-	 * @return
+	 * @return int
 	 */
 	int getLikes();
 	
@@ -35,7 +35,7 @@ public interface WallPost {
 	/**
 	 * Retorna true si el post está marcado como destacado, false en caso contrario
 	 * 
-	 * @return
+	 * @return boolean
 	 */
 	boolean isFeatured();
 	
