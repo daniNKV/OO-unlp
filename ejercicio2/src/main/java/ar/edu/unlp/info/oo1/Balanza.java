@@ -1,42 +1,20 @@
 package ar.edu.unlp.info.oo1;
 
-public class Balanza implements IBalanza {
-    private int cantidadDeProductos;
-    private Double pesoTotal;
-    private Double precioTotal;
+import java.util.List;
 
+public class Balanza extends ListadoProductos {
     public Balanza() {
         this.ponerEnCero();
     }
 
-    public int getCantidadDeProductos() {
-        return cantidadDeProductos;
-    }
-
-    public Double getPesoTotal() {
-        return pesoTotal;
-    }
-
-    public Double getPrecioTotal() {
-        return precioTotal;
-    }
-
-    @Override
     public void ponerEnCero() {
-        this.cantidadDeProductos = 0;
-        this.pesoTotal = 0.0;
-        this.precioTotal = 0.0;
+        super.reset();
     }
 
-    public void agregarProducto(Producto producto) {
-        this.cantidadDeProductos += 1;
-        this.precioTotal += producto.getPrecio();
-        this.pesoTotal += producto.getPeso();
-    }
+    public void agregarProducto(Producto producto) { super.agregar(producto); }
 
-    @Override
     public Ticket emitirTicket() {
-        return new Ticket(cantidadDeProductos, pesoTotal, precioTotal);
+        return new Ticket(super.getProductos());
     }
 
 

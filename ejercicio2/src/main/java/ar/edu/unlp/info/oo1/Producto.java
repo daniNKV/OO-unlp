@@ -1,12 +1,15 @@
 package ar.edu.unlp.info.oo1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Producto {
     private double peso;
     private double precioPorKilo;
     private String descripcion;
 
     public Producto() {
-        this.establecerEnCero();
+        this.reset();
     }
 
     public Producto(double peso, double precioPorKilo, String descripcion) {
@@ -39,7 +42,7 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    private void establecerEnCero() {
+    private void reset() {
         this.peso = 0;
         this.precioPorKilo = 0;
         this.descripcion = "Sin descripcion";
@@ -48,4 +51,5 @@ public class Producto {
     public double getPrecio() {
         return this.getPrecioPorKilo() * this.getPeso();
     }
+
 }

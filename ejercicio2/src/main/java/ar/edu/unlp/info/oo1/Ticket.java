@@ -1,39 +1,23 @@
 package ar.edu.unlp.info.oo1;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.List;
 
-public class Ticket {
+public class Ticket extends ListadoProductos{
     private LocalDate fecha;
-    private int cantidadDeProductos;
-    private double pesoTotal;
-    private double precioTotal;
+   private double porcentajeImpuestos = 0.21;
 
-    public Ticket(int cantidadDeProductos, double pesoTotal, double precioTotal) {
+
+    public Ticket(List<Producto> productos) {
+        super(productos);
         this.fecha = LocalDate.now();
-        this.cantidadDeProductos = cantidadDeProductos;
-        this.pesoTotal = pesoTotal;
-        this.precioTotal = precioTotal;
     }
 
     public LocalDate getFecha() {
         return fecha;
     }
 
-    public int getCantidadDeProductos() {
-        return cantidadDeProductos;
-    }
-
-    public double getPesoTotal() {
-        return pesoTotal;
-    }
-
-    public double getPrecioTotal() {
-        return precioTotal;
-    }
-
     public double impuesto() {
-        double porcentajeImpuestos = 0.21;
-        return this.precioTotal * porcentajeImpuestos;
+        return super.getPrecioTotal() * this.porcentajeImpuestos;
     }
 }
