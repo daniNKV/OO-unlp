@@ -5,23 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d82b6d76-a2cc-4f3b-b12e-77956095f1bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ejercicio-2-test/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ejercicio-2-test/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ejercicio-2-test/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ejercicio-2-test/BalanzaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ejercicio-2-test/ProductoTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/unlp/ar/oo/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/unlp/ar/oo/Presupuesto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unlp/ar/oo/Presupuestos/ItemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PresupuestoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unlp/ar/oo/Presupuestos/PresupuestoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="PresupuestoTest" />
+    </enabled-run-configurations>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2VAT1SSs2PsjpIF2eLSqhKa5BVr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,9 +46,27 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/daninkv/Projects/College/OO-unlp/ejercicio3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="PresupuestoTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="ejercicio3" />
+      <option name="PACKAGE_NAME" value="unlp.ar.oo.Presupuestos" />
+      <option name="MAIN_CLASS_NAME" value="unlp.ar.oo.Presupuestos.PresupuestoTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,6 +76,9 @@
       <option name="presentableId" value="Default" />
       <updated>1694277675382</updated>
       <workItem from="1694277676601" duration="5000" />
+      <workItem from="1694278644922" duration="164000" />
+      <workItem from="1694278820583" duration="47000" />
+      <workItem from="1694278880109" duration="4502000" />
     </task>
     <servers />
   </component>

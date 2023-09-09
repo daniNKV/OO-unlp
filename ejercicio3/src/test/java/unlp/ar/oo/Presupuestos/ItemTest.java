@@ -1,9 +1,10 @@
-package ar.edu.info.oo1.ej3_presupuestos;
+package unlp.ar.oo.Presupuestos;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import unlp.ar.oo.Item;
 
 public class ItemTest {
 

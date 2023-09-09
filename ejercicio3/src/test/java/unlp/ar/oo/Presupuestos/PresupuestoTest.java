@@ -1,4 +1,4 @@
-package ar.edu.info.oo1.ej3_presupuestos;
+package unlp.ar.oo.Presupuestos;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -6,6 +6,8 @@ import java.time.LocalDate;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import unlp.ar.oo.Item;
+import unlp.ar.oo.Presupuesto;
 
 public class PresupuestoTest {
 
