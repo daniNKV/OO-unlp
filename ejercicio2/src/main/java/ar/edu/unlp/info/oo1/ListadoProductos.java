@@ -18,6 +18,10 @@ public class ListadoProductos extends ArrayList<Producto> {
         return this.productos;
     }
 
+    public int getCantidadDeProductos() {
+        return this.productos.size();
+    }
+
     public void agregar(Producto producto) {
         this.productos.add(producto);
     }
