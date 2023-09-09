@@ -30,7 +30,7 @@ public class Presupuesto {
 
     public double calcularTotal() {
         return this.items.stream()
-                .mapToDouble(item -> item.costo())
-                .sum();
+                .mapToDouble(Item::costo)
+                .reduce(0, Double::sum);
     }
 }
