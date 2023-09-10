@@ -3,7 +3,7 @@ package ar.edu.unlp.info.oo1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListadoProductos extends ArrayList<Producto> {
+abstract class ListadoProductos extends ArrayList<Producto> {
     List<Producto> productos;
 
     public ListadoProductos() {
@@ -22,11 +22,11 @@ public class ListadoProductos extends ArrayList<Producto> {
         return this.productos.size();
     }
 
-    public void agregar(Producto producto) {
+    public void agregarProducto(Producto producto) {
         this.productos.add(producto);
     }
 
-    public void reset() { this.productos = new ArrayList<>(); }
+    public void vaciarProductos() { this.productos = new ArrayList<>(); }
 
     public Double getPesoTotal() {
         return productos.stream()
