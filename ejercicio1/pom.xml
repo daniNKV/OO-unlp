@@ -45,7 +45,7 @@
 						<configuration>
 							<archive>
 								<manifest>
-									<mainClass>ar.edu.unlp.oo1.ejercicio1.Ejercicio1Application</mainClass>
+									<mainClass>unlp.ar.oo.ejercicio1.Ejercicio1Application</mainClass>
 								</manifest>
 							</archive>
 							<descriptorRefs>
