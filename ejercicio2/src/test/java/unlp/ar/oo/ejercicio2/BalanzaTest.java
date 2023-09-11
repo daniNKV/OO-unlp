@@ -4,9 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDate;
 
-import unlp.ar.oo.ejercicio2.Balanza;
-import unlp.ar.oo.ejercicio2.Producto;
-import unlp.ar.oo.ejercicio2.Ticket;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
