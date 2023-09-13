@@ -1,6 +1,5 @@
 package unlp.ar.oo.ejercicio2;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface ListadoProductos {
