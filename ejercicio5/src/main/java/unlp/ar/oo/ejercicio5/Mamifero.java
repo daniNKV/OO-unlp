@@ -25,27 +25,11 @@ public class Mamifero {
     public void setMadre(Mamifero madre) { this.antepasados.setMadre(madre); }
     public Mamifero getPadre() { return antepasados.getPadre(); }
     public void setPadre(Mamifero padre) { this.antepasados.setPadre(padre); }
-    public Mamifero getAbueloMaterno() {
-        return this.antepasados.getAbueloMaterno();
-    }
-    public Mamifero getAbuelaMaterna() {
-        return this.antepasados.getAbuelaMaterna();
-    }
-    public Mamifero getAbueloPaterno() {
-        return this.antepasados.getAbueloPaterno();
-    }
-    public Mamifero getAbuelaPaterna() {
-        return this.antepasados.getAbuelaPaterna();
-    }
-
-    public LocalDate getFechaDeNacimiento() {
-        return fechaDeNacimiento; }
-
-    public void setFechadeNacimiento(LocalDate fechadeNacimiento) {
-        this.fechaDeNacimiento = fechadeNacimiento;
-    }
-
-    public boolean tieneComoAncestroA(Mamifero ancestro) {
-        return this.antepasados.esAncestro(ancestro);
-    }
+    public Mamifero getAbueloMaterno() { return antepasados.getAbueloMaterno(); }
+    public Mamifero getAbuelaMaterna() { return this.antepasados.getAbuelaMaterna(); }
+    public Mamifero getAbueloPaterno() { return this.antepasados.getAbueloPaterno(); }
+    public Mamifero getAbuelaPaterna() { return this.antepasados.getAbuelaPaterna(); }
+    public LocalDate getFechaDeNacimiento() { return fechaDeNacimiento; }
+    public void setFechadeNacimiento(LocalDate fechadeNacimiento) { this.fechaDeNacimiento = fechadeNacimiento; }
+    public boolean tieneComoAncestroA(Mamifero ancestro) { return this.antepasados.esAncestro(ancestro); }
 }

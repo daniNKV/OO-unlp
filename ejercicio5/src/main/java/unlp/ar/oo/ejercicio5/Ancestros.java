@@ -14,21 +14,13 @@ public class Ancestros implements Genealogia {
     @Override
     public void setPadre(Mamifero padre) { this.padre = padre; }
     @Override
-    public Mamifero getAbueloMaterno() {
-        return madre != null ? madre.getPadre() : null;
-    }
+    public Mamifero getAbueloMaterno() { return madre != null ? madre.getPadre() : null; }
     @Override
-    public Mamifero getAbuelaMaterna() {
-        return madre != null ? madre.getMadre() : null;
-    }
+    public Mamifero getAbuelaMaterna() { return madre != null ? madre.getMadre() : null; }
     @Override
-    public Mamifero getAbueloPaterno() {
-        return padre != null ? padre.getPadre() : null;
-    }
+    public Mamifero getAbueloPaterno() { return padre != null ? padre.getPadre() : null; }
     @Override
-    public Mamifero getAbuelaPaterna() {
-        return padre != null ? padre.getMadre() : null;
-    }
+    public Mamifero getAbuelaPaterna() { return padre != null ? padre.getMadre() : null; }
     @Override
     public Boolean esAncestro(Mamifero ancestro) {
         if (madre == ancestro || padre == ancestro) { return true; }
