@@ -9,15 +9,15 @@ import org.junit.jupiter.api.Test;
 
 
 public class FarolaTest {
-	 private Farola farolaUno;
-	  private Farola farolaDos;
+	 private StreetLight farolaUno;
+	  private StreetLight farolaDos;
 	  
 	  
 
 	  @BeforeEach
 	  void setUp() throws Exception {
-	    this.farolaUno = new Farola();
-	    this.farolaDos = new Farola();
+	    this.farolaUno = new StreetLight();
+	    this.farolaDos = new StreetLight();
 
 	  }
 
