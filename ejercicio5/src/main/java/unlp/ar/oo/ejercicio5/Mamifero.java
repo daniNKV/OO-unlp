@@ -14,6 +14,7 @@ public class Mamifero {
 
     public Mamifero(String identificador) {
         this();
+        this.identificador = identificador;
     }
 
     public String getIdentificador() { return identificador; }
