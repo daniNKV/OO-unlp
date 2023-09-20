@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d82b6d76-a2cc-4f3b-b12e-77956095f1bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ejercicio4/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ejercicio4/src/test/java/unlp/ar/oo/CuerpoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ejercicio4/src/test/java/unlp/ar/oo/TestCirculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ejercicio4/src/test/java/unlp/ar/oo/TestCuadrado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ejercicio2/src/main/java/ar/edu/unlp/info/oo1/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unlp/ar/oo/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unlp/ar/oo/Presupuestos/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unlp/ar/oo/Presupuesto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unlp/ar/oo/Presupuestos/Presupuesto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unlp/ar/oo/Presupuestos/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unlp/ar/oo/Presupuestos/Presupuestos/ItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unlp/ar/oo/Presupuestos/PresupuestoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unlp/ar/oo/Presupuestos/Presupuestos/PresupuestoTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="d82b6d76-a2cc-4f3b-b12e-77956095f1bf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +73,7 @@
       <workItem from="1694277676601" duration="5000" />
       <workItem from="1694278644922" duration="164000" />
       <workItem from="1694278820583" duration="47000" />
-      <workItem from="1694278880109" duration="9540000" />
+      <workItem from="1694278880109" duration="9910000" />
     </task>
     <servers />
   </component>
