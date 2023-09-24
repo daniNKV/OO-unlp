@@ -30,12 +30,12 @@ public class Usuario {
         return this.ultimoConsumo().getEnergiaActiva();
     }
 
-    private Consumo ultimoConsumo() {
+    public Consumo ultimoConsumo() {
         return this.mediciones.get(mediciones.size() - 1);
     }
 
-    public Factura facturarEnBaseA(Double precioKWh) {
-        Factura factura = new Factura(this, ultimoConsumo(), precioKWh);
+    public Factura facturarEnBaseA(double precioKWh) {
+        Factura factura = new Factura(this, ultimoConsumo());
         this.facturas.add(factura);
         return factura;
     }

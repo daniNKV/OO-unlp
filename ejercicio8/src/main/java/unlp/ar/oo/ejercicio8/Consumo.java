@@ -1,16 +1,23 @@
 package unlp.ar.oo.ejercicio8;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Consumo {
-    private Date fecha;
-    private Double consumoEnergiaActiva;
-    private Double consumoEnergiaReactiva;
+    private LocalDate fecha;
+    private double consumoEnergiaActiva;
+    private double consumoEnergiaReactiva;
 
     public Consumo(Double consumoEnergiaActiva, Double consumoEnergiaReactiva) {
         this.consumoEnergiaActiva = consumoEnergiaActiva;
         this.consumoEnergiaReactiva = consumoEnergiaReactiva;
-        this.fecha = new Date();
+        this.fecha = LocalDate.now();
+    }
+
+    public Consumo(LocalDate date, int energiaActiva, int energiaReactiva) {
+        this.fecha = date;
+        this.consumoEnergiaReactiva = energiaReactiva;
+        this.consumoEnergiaActiva = energiaActiva;
     }
 
     public Double getEnergiaActiva() {

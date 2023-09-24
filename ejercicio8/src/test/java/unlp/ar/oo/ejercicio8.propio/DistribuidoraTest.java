@@ -1,7 +1,11 @@
-package unlp.ar.oo.ejercicio8;
+package unlp.ar.oo.ejercicio8.propio;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import unlp.ar.oo.ejercicio8.Consumo;
+import unlp.ar.oo.ejercicio8.Distribuidora;
+import unlp.ar.oo.ejercicio8.Factura;
+import unlp.ar.oo.ejercicio8.Usuario;
 
 import java.util.LinkedList;
 import java.util.List;

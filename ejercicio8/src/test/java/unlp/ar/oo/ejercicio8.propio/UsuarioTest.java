@@ -1,7 +1,10 @@
-package unlp.ar.oo.ejercicio8;
+package unlp.ar.oo.ejercicio8.propio;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import unlp.ar.oo.ejercicio8.Consumo;
+import unlp.ar.oo.ejercicio8.Factura;
+import unlp.ar.oo.ejercicio8.Usuario;
 
 import java.util.List;
 
@@ -34,7 +37,7 @@ public class UsuarioTest {
     public void testFacturarEnBaseA() {
         Factura factura = usuario.facturarEnBaseA(1.0);
         List<Factura> facturas = usuario.facturas();
-        assertEquals(usuario, factura.usuario());
+        assertEquals(usuario, factura.getUsuario());
         assertEquals(factura, facturas.get(facturas.size() - 1));
     }
 }

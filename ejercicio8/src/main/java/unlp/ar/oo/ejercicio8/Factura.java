@@ -1,30 +1,34 @@
 package unlp.ar.oo.ejercicio8;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Factura {
     private Usuario usuario;
-    private Double montoEnergiaActiva;
-    private Double descuento;
+    private double montoEnergiaActiva;
+    private double descuento;
     private LocalDate fecha;
 
-    public Factura(Usuario usuario, Consumo consumo, Double precioKWh) {
+    public Factura(Usuario usuario, Consumo consumo) {
         this.usuario = usuario;
-        this.montoEnergiaActiva = consumo.getEnergiaActiva() * precioKWh;
+        this.montoEnergiaActiva = consumo.getEnergiaActiva();
         this.descuento = calcularDescuento(consumo.factorDePotencia());
         this.fecha = LocalDate.now();
     }
 
-    private Double calcularDescuento(Double factorDePotencia) {
-        return factorDePotencia > 0.8 ? 0.1 : 0.0;
+    public Factura(int montoEnergiaActiva, int descuento, Usuario usuario) {
+
     }
 
-    public Double montoTotal() { return montoEnergiaActiva - descuento();}
 
-    public Usuario usuario() { return this.usuario; }
+    private Double calcularDescuento(Double factorDePotencia) {
+        return factorDePotencia > 0.8 ? 10.0 : 0.0;
+    }
 
-    public LocalDate fecha() { return this.fecha; }
+    public Double getMontoEnergiaActiva() { return montoEnergiaActiva;}
 
-    public Double descuento() { return this.descuento * montoEnergiaActiva; }
+    public Usuario getUsuario() { return this.usuario; }
+
+    public LocalDate getFecha() { return this.fecha; }
+
+    public Double getDescuento() { return this.descuento * montoEnergiaActiva; }
 }
