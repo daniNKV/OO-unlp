@@ -1,4 +1,4 @@
-package unlp.ar.oo.ejercicio8;
+package unlp.ar.oo.ejercicio9;
 
 public class JobDescription {
 
