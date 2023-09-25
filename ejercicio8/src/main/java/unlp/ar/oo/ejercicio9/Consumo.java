@@ -1,7 +1,6 @@
-package unlp.ar.oo.ejercicio8;
+package unlp.ar.oo.ejercicio9;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Consumo {
     private LocalDate fecha;
