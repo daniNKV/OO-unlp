@@ -1,4 +1,4 @@
-package unlp.ar.oo.ejercicio8;
+package unlp.ar.oo.ejercicio9;
 
 public abstract class Cuenta {
     private double saldo;
@@ -22,17 +22,16 @@ public abstract class Cuenta {
         }
         return false;
     }
-    public boolean transferirACuenta(double monto, Cuenta cuentaDestino) {
+    protected boolean transferirACuenta(double monto, Cuenta cuentaDestino) {
         if (this.puedeExtraer(monto)) {
             this.extraerSinControlar(monto);
             cuentaDestino.depositar(monto);
             return true;
         }
         return false;
-
     }
 
-    public abstract boolean puedeExtraer(double monto);
+    protected abstract boolean puedeExtraer(double monto);
 
 }
 
