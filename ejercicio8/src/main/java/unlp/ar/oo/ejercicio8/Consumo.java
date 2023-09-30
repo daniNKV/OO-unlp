@@ -1,4 +1,4 @@
-package unlp.ar.oo.ejercicio9;
+package unlp.ar.oo.ejercicio8;
 
 import java.time.LocalDate;
 

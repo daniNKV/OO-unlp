@@ -1,4 +1,4 @@
-package unlp.ar.oo.ejercicio9;
+package unlp.ar.oo.ejercicio10;
 
 import java.util.ArrayList;
 import java.util.List;

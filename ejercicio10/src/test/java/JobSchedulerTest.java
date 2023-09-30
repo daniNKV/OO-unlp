@@ -2,8 +2,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import unlp.ar.oo.ejercicio9.JobDescription;
-import unlp.ar.oo.ejercicio9.JobScheduler;
+import unlp.ar.oo.ejercicio10.JobDescription;
+import unlp.ar.oo.ejercicio10.JobScheduler;
 
 public class JobSchedulerTest {
     protected JobDescription firstJob;

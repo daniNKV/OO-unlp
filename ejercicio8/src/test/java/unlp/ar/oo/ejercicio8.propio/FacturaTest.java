@@ -2,9 +2,9 @@ package unlp.ar.oo.ejercicio9.propio;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import unlp.ar.oo.ejercicio9.Consumo;
-import unlp.ar.oo.ejercicio9.Factura;
-import unlp.ar.oo.ejercicio9.Usuario;
+import unlp.ar.oo.ejercicio8.Consumo;
+import unlp.ar.oo.ejercicio8.Factura;
+import unlp.ar.oo.ejercicio8.Usuario;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
