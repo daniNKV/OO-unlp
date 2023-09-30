@@ -20,7 +20,7 @@ public class InversorTest {
 
     @Test
     public void testValorActual() {
-        assertEquals(100 + 100 + Math.pow(1 + 0.1, 10), inversor.valorActual());
+        assertEquals(100 + 100 * Math.pow(1 + 0.1, 10), inversor.valorActual());
     }
 
     @Test public void testAgregarInversion() {

@@ -17,6 +17,6 @@ public class PlazoFijoTest {
 
     @Test
     public void testValorActual() {
-        assertEquals(100 + Math.pow(1 + 0.1, 10), plazoFijo.valorActual());
+        assertEquals(100 * Math.pow(1 + 0.1, 10), plazoFijo.valorActual());
     }
 }
