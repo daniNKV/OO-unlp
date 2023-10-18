@@ -13,6 +13,11 @@ public class Email {
         this.archivos = archivos;
     }
 
+    public Email(String titulo, String cuerpo) {
+        this.titulo = titulo;
+        this.cuerpo = cuerpo;
+    }
+
     public Set<Archivo> getArchivos() {
         return archivos;
     }

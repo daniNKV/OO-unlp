@@ -35,4 +35,8 @@ public class Carpeta {
                 .mapToInt(Email::size)
                 .sum();
     }
+
+    public Integer cantidadEmails() {
+        return emails.size();
+    }
 }
