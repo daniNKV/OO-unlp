@@ -24,9 +24,11 @@ public class Ancestros implements Genealogia {
     @Override
     public Boolean esAncestro(Mamifero ancestro) {
         if (madre == ancestro || padre == ancestro) { return true; }
-        Boolean ancestroDeMadre = madre != null && madre.tieneComoAncestroA(ancestro);
-        Boolean ancestroDePadre = padre != null && padre.tieneComoAncestroA(ancestro);
-        // No se aprovecha el mecanismo de short circuit
-        return ancestroDeMadre || ancestroDePadre;
+        return isAncestroDe(madre, ancestro) || isAncestroDe(padre, ancestro);
     }
+
+    private boolean isAncestroDe(Mamifero progenitor, Mamifero ancestro) {
+        return progenitor != null && progenitor.tieneComoAncestroA(ancestro);
+    }
+
 }
