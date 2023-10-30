@@ -27,6 +27,22 @@ public class Propiedad {
         this.reservasRecibidas = new HistorialReservas();
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public double getPrecioPorNoche() {
+        return precioPorNoche;
+    }
+
     public void eliminarReserva(Reserva reserva) {
         this.reservasRecibidas.eliminar(reserva);
     }

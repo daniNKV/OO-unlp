@@ -26,9 +26,12 @@ public class DateLapse {
         return (int) DAYS.between(fromDate, toDate);
     }
 
-
     public boolean includesDate(LocalDate other) {
         return fromDate.isBefore(other) && toDate.isAfter(other);
+    }
+
+    public boolean overlaps() {
+        return true;
     }
 
 }

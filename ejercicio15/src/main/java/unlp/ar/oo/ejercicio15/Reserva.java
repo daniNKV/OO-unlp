@@ -1,5 +1,7 @@
 package unlp.ar.oo.ejercicio15;
 
+import unlp.ar.oo.ejercicio14.DateLapse;
+
 import java.time.LocalDate;
 
 public class Reserva {
@@ -24,6 +26,7 @@ public class Reserva {
     }
 
     public double precioTotal() {
-        return 0.0;
+        DateLapse lapso = new DateLapse(this.desdeFecha, this.hastaFecha);
+        return lapso.sizeInDays() * propiedad.getPrecioPorNoche();
     }
 }
