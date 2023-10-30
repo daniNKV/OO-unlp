@@ -9,7 +9,16 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ejercicio10" target="17" />
+      <module name="ejercicio11" target="17" />
+      <module name="Ejercicio12" target="17" />
+      <module name="ejercicio13" target="17" />
+      <module name="Ejercicio15" target="17" />
+      <module name="ejercicio16" target="17" />
+      <module name="ejercicio17" target="17" />
+      <module name="ejercicio19" target="17" />
       <module name="ejercicio5" target="17" />
+      <module name="ejercicio9" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

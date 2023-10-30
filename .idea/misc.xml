@@ -5,11 +5,34 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/ejercicio5/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio9/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio10/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio11/pom.xml" />
+        <option value="$PROJECT_DIR$/Ejercicio12/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio13/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio14/pom.xml" />
+        <option value="$PROJECT_DIR$/Ejercicio15/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio16/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio17/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio19/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio20/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Ejercicio12/pom.xml" />
+        <option value="$PROJECT_DIR$/Ejercicio15/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio10/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio11/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio12/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio13/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio14/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio15/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio16/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio17/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio19/pom.xml" />
         <option value="$PROJECT_DIR$/ejercicio5/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio9/pom.xml" />
       </set>
     </option>
   </component>
