@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pasajero extends Usuario {
-    private List<Viaje> viajesRealizados;
+    private List<Viaje> viajes;
     public Pasajero(String nombre) {
         super(nombre);
-        this.viajesRealizados = new ArrayList<>();
+        this.viajes = new ArrayList<>();
     }
 
     @Override
@@ -26,26 +26,30 @@ public class Pasajero extends Usuario {
         if (viajoEnLosUltimos30Dias()) {
             return monto * porcentajeComision;
         } else {
-            return monto;
+            return 0.0;
         }
     }
 
     public Boolean tieneSaldo() {
-        return this.getSaldo() > 0;
+        return this.getSaldo() >= 0;
     }
 
     private Boolean viajoEnLosUltimos30Dias() {
         LocalDate fechaActual = LocalDate.now();
         LocalDate fechaHaceUnMes = fechaActual.minusDays(30);
-        return this.viajesRealizados.stream()
-                .anyMatch(viaje -> viaje.getFechaViaje().isAfter(fechaHaceUnMes));
+        return this.viajes.stream()
+                .anyMatch(viaje -> viaje.getFechaViaje().isAfter(fechaHaceUnMes) && viaje.getFechaViaje().isBefore(fechaActual));
     }
 
     private Boolean realizoViaje() {
-        return !this.viajesRealizados.isEmpty();
+        return !this.viajes.isEmpty();
     }
 
     public void agregarViaje(Viaje viaje) {
-        this.viajesRealizados.add(viaje);
+        this.viajes.add(viaje);
+    }
+
+    public int cantidadViajesRealizados() {
+        return this.viajes.size();
     }
 }

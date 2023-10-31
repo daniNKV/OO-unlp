@@ -16,6 +16,10 @@ public class Vehiculo {
         this.valorDeMercado = valorDeMercado;
     }
 
+    public void setConductor(Conductor conductor) {
+        this.conductor = conductor;
+    }
+
     public int getCapacidad() {
         return this.capacidad;
     }

@@ -22,27 +22,31 @@ public class Viaje {
         this.viajeros.add(vehiculo.getConductor());
     }
 
-    public void agregarPasajero(Pasajero pasajero) {
+    public Boolean agregarPasajero(Pasajero pasajero) {
         if (quedaLugarDisponible() && pasajero.tieneSaldo() && suficienteAntelacion()) {
             this.viajeros.add(pasajero);
             pasajero.agregarViaje(this);
+            return true;
+        } else {
+            return false;
         }
     }
 
     private Boolean quedaLugarDisponible() {
-        return this.vehiculo.getCapacidad() > this.viajeros.size();
+        return this.vehiculo.getCapacidad() > this.cantidadViajeros();
     }
 
     private Boolean suficienteAntelacion() {
         LocalDate fechaActual = LocalDate.now();
-        return fechaViaje.minusDays(2).isEqual(fechaActual);
+        LocalDate dosDiasAntes = fechaViaje.minusDays(2);
+        return dosDiasAntes.isAfter(fechaActual) || dosDiasAntes.isEqual(fechaActual);
     }
 
     public Boolean esManana() {
         return fechaViaje.isEqual(LocalDate.now().plusDays(1));
     }
 
-    private int cantidadViajeros() {
+    public int cantidadViajeros() {
         return this.viajeros.size();
     }
     public LocalDate getFechaViaje() {

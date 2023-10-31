@@ -13,23 +13,11 @@ public class ServicioPoolCar {
         this.viajes = new HashSet<>();
     }
 
-    public Conductor registrarConductor(String nombre, Vehiculo vehiculo) {
-        Conductor nuevoConductor = new Conductor(nombre, vehiculo);
-        this.usuarios.add(nuevoConductor);
-        return nuevoConductor;
+    public void registrarUsuario(Usuario usuario) {
+        this.usuarios.add(usuario);
     }
 
-    public Pasajero registrarPasajero(String nombre) {
-        Pasajero nuevoPasajero = new Pasajero(nombre);
-        this.usuarios.add(nuevoPasajero);
-        return nuevoPasajero;
-    }
-
-    public Viaje crearViaje(String origen, String destino, double costo, Vehiculo vehiculo, LocalDate fechaViaje) {
-        Viaje nuevoViaje = new Viaje(origen, destino, costo, fechaViaje, vehiculo);
-        this.viajes.add(nuevoViaje);
-        return nuevoViaje;
-    }
+    public void registrarViaje(Viaje viaje) { this.viajes.add(viaje); }
 
     public void cargarMontoDeRegalo(double monto) {
         this.usuarios.forEach(usuario -> usuario.agregarSaldo(monto));

@@ -9,7 +9,7 @@ public class Conductor extends Usuario {
     }
 
     @Override
-    protected double obtenerBonificacion() {
+    public double obtenerBonificacion() {
         double porcentajeBonificacion = 0.01;
         return this.vehiculo.getValorDeMercado() * porcentajeBonificacion;
     }
