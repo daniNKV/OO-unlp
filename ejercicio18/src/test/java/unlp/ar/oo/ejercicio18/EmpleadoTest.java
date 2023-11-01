@@ -23,8 +23,10 @@ class EmpleadoTest {
         contratoPorHoraActivo = new ContratoPorHora(LocalDate.of(2020, 1, 1), LocalDate.of(2023, 1, 1), 10, 10);
         empleado = new Empleado("Javier", "Gomez", 2000, LocalDate.of(2000, 1, 1), false, false);
         empleadoSinContrato = new Empleado("Marcela", "Gutierrez", 2001, LocalDate.of(1995, 1, 1), true, true);
-        empleado.agregarContrato(LocalDate.now(), 1000, 100, 100);
-        empleado.agregarContrato(LocalDate.of(2021, 1, 1), LocalDate.of(2022, 2, 1), 10, 10);
+        Contrato contratoPlanta = new ContratoDePlanta(LocalDate.now(), 1000, 100, 100);
+        Contrato contratoPorHora = new ContratoPorHora(LocalDate.of(2021, 1, 1), LocalDate.of(2022, 2, 1), 10, 10);
+        empleado.agregarContrato(contratoPlanta);
+        empleado.agregarContrato(contratoPorHora);
 
     }
 

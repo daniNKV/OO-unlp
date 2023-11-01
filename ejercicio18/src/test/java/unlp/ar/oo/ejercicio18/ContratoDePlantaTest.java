@@ -15,8 +15,8 @@ class ContratoDePlantaTest {
     @BeforeEach
     public void setUp() throws Exception {
         contrato = new ContratoDePlanta(LocalDate.now(), 1000, 100, 100);
-        contratoMedio = new ContratoDePlanta(LocalDate.of(2013, 01, 01), 1000, 100, 100);
-        contratoLargo = new ContratoDePlanta(LocalDate.of(2002, 01, 01), 1000, 100, 100);
+        contratoMedio = new ContratoDePlanta(LocalDate.of(2013, 1, 1), 1000, 100, 100);
+        contratoLargo = new ContratoDePlanta(LocalDate.of(2002, 1, 1), 1000, 100, 100);
 
     }
 
