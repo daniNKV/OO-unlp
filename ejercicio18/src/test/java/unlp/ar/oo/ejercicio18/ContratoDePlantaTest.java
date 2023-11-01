@@ -14,9 +14,10 @@ class ContratoDePlantaTest {
     ContratoDePlanta contratoLargo;
     @BeforeEach
     public void setUp() throws Exception {
-        contrato = new ContratoDePlanta(LocalDate.now(), 1000, 100, 100);
-        contratoMedio = new ContratoDePlanta(LocalDate.of(2013, 1, 1), 1000, 100, 100);
-        contratoLargo = new ContratoDePlanta(LocalDate.of(2002, 1, 1), 1000, 100, 100);
+        Empleado empleado = new Empleado("Julian", "Perez", 2000, LocalDate.of(1997,5,10), true, true);
+        contrato = new ContratoDePlanta(empleado, LocalDate.now(), 1000, 100, 100);
+        contratoMedio = new ContratoDePlanta(empleado, LocalDate.of(2013, 1, 1), 1000, 100, 100);
+        contratoLargo = new ContratoDePlanta(empleado, LocalDate.of(2002, 1, 1), 1000, 100, 100);
 
     }
 

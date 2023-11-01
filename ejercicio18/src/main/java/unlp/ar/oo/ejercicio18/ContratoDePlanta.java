@@ -9,8 +9,8 @@ public class ContratoDePlanta extends Contrato {
     private double montoPorConyuge;
     private double montoPorHijos;
 
-    public ContratoDePlanta(LocalDate fechaInicio, double sueldoMensual, double montoPorConyuge, double montoPorHijos) {
-        super(fechaInicio);
+    public ContratoDePlanta(Empleado empleado, LocalDate fechaInicio, double sueldoMensual, double montoPorConyuge, double montoPorHijos) {
+        super(fechaInicio, empleado);
         this.sueldoMensual = sueldoMensual;
         this.montoPorConyuge = montoPorConyuge;
         this.montoPorHijos = montoPorHijos;
@@ -18,11 +18,17 @@ public class ContratoDePlanta extends Contrato {
 
     @Override
     public double calcularMonto(int antiguedad) {
-        double montoBasico = sueldoMensual + montoPorConyuge + montoPorHijos;
-        double montoAntiguedad = montoBasico * montoPorAntiguedad(antiguedad);
+        double montoBasico = sueldoMensual + montoPorFamilia();
+        double montoAntiguedad = montoBasico * porcentajePorAntiguedad(antiguedad);
         return montoBasico + montoAntiguedad;
     }
 
+    public double montoPorFamilia() {
+        double montoConyuge = this.getEmpleado().getTieneConyuge() ? montoPorConyuge : 0.0;
+        double montoHijos = this.getEmpleado().getTieneHijos() ? montoPorHijos : 0.0;
+
+        return montoConyuge + montoHijos;
+    }
     @Override
     public Boolean estaActivo() {
         return true;

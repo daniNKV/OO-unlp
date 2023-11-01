@@ -14,9 +14,11 @@ class ContratoPorHoraTest {
     ContratoPorHora contratoCorto;
     @BeforeEach
     public void setUp() throws Exception {
-        contrato = new ContratoPorHora(LocalDate.of(2023, 1, 1), LocalDate.of(2024, 1, 1), 10, 10);
-        contratoVencido = new ContratoPorHora(LocalDate.of(2021, 1, 1), LocalDate.of(2022, 1, 1), 10, 10);
-        contratoCorto = new ContratoPorHora(LocalDate.of(2023, 1, 1), LocalDate.of(2023, 2, 1), 10, 10);
+        Empleado empleado = new Empleado("Julian", "Perez", 2000, LocalDate.of(1997,5,10), true, true);
+
+        contrato = new ContratoPorHora(empleado, LocalDate.of(2023, 1, 1), LocalDate.of(2024, 1, 1), 10, 10);
+        contratoVencido = new ContratoPorHora(empleado, LocalDate.of(2021, 1, 1), LocalDate.of(2022, 1, 1), 10, 10);
+        contratoCorto = new ContratoPorHora(empleado, LocalDate.of(2023, 1, 1), LocalDate.of(2023, 2, 1), 10, 10);
     }
     @Test
     void calcularMonto() {

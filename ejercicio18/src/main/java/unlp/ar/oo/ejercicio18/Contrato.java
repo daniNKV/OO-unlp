@@ -4,12 +4,18 @@ import java.time.LocalDate;
 
 public abstract class Contrato {
     private LocalDate fechaInicio;
+    private Empleado empleado;
 
-    public Contrato(LocalDate fechaInicio) {
+    protected Empleado getEmpleado() {
+        return empleado;
+    }
+
+    public Contrato(LocalDate fechaInicio, Empleado empleado) {
+        this.empleado = empleado;
         this.fechaInicio = fechaInicio;
     }
 
-    public double montoPorAntiguedad(int antiguedad) {
+    public double porcentajePorAntiguedad(int antiguedad) {
         if (antiguedad < 5) return 0.0;
         else if (antiguedad < 10) return 0.3;
         else if (antiguedad < 15) return 0.5;

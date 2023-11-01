@@ -19,12 +19,14 @@ class EmpleadoTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        contratoPlantaActivo = new ContratoDePlanta(LocalDate.now(), 1000, 100, 100);
-        contratoPorHoraActivo = new ContratoPorHora(LocalDate.of(2020, 1, 1), LocalDate.of(2023, 1, 1), 10, 10);
         empleado = new Empleado("Javier", "Gomez", 2000, LocalDate.of(2000, 1, 1), false, false);
         empleadoSinContrato = new Empleado("Marcela", "Gutierrez", 2001, LocalDate.of(1995, 1, 1), true, true);
-        Contrato contratoPlanta = new ContratoDePlanta(LocalDate.now(), 1000, 100, 100);
-        Contrato contratoPorHora = new ContratoPorHora(LocalDate.of(2021, 1, 1), LocalDate.of(2022, 2, 1), 10, 10);
+
+        contratoPlantaActivo = new ContratoDePlanta(empleado, LocalDate.now(), 1000, 100, 100);
+        contratoPorHoraActivo = new ContratoPorHora(empleado, LocalDate.of(2020, 1, 1), LocalDate.of(2023, 1, 1), 10, 10);
+
+        Contrato contratoPlanta = new ContratoDePlanta(empleado, LocalDate.now(), 1000, 100, 100);
+        Contrato contratoPorHora = new ContratoPorHora(empleado, LocalDate.of(2021, 1, 1), LocalDate.of(2022, 2, 1), 10, 10);
         empleado.agregarContrato(contratoPlanta);
         empleado.agregarContrato(contratoPorHora);
 

@@ -9,8 +9,8 @@ public class ContratoPorHora extends Contrato {
     private double montoPorHora;
     private int horasPorMes;
 
-    public ContratoPorHora(LocalDate fechaInicio, LocalDate fechaFinalizacion, double montoPorHora, int horasPorMes) {
-        super(fechaInicio);
+    public ContratoPorHora(Empleado empleado, LocalDate fechaInicio, LocalDate fechaFinalizacion, double montoPorHora, int horasPorMes) {
+        super(fechaInicio, empleado);
         this.fechaFinalizacion = fechaFinalizacion;
         this.montoPorHora = montoPorHora;
         this.horasPorMes = horasPorMes;
@@ -19,7 +19,7 @@ public class ContratoPorHora extends Contrato {
     @Override
     public double calcularMonto(int antiguedad) {
         double montoBasico = montoPorHora * horasPorMes;
-        double montoAntiguedad = montoBasico * montoPorAntiguedad(antiguedad);
+        double montoAntiguedad = montoBasico * porcentajePorAntiguedad(antiguedad);
         return montoBasico + montoAntiguedad;
     }
 
