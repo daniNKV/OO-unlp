@@ -13,10 +13,6 @@ public class ServicioLiquidacionHaberes {
         this.nominaEmpleados = new HashSet<>();
     }
 
-    public void agregarEmpleado(String nombre, String apellido, Integer cuil, LocalDate fechaNacimiento, Boolean tieneConyuge, Boolean tieneHijos) {
-        this.nominaEmpleados.add(new Empleado(nombre, apellido, cuil, fechaNacimiento, tieneConyuge, tieneHijos));
-    }
-
     public void agregarEmpleado(Empleado empleado) {
         this.nominaEmpleados.add(empleado);
     }

@@ -8,9 +8,10 @@ public class PoliticaModerada implements PoliticaCancelacion {
     @Override
     public double calcularPorcentajeReembolso(LocalDate fechaReserva, LocalDate fechaCancelacion) {
         if (fechaCancelacion.isBefore(fechaReserva)) {
-            int diasHastaReserva = new DateLapse(fechaCancelacion, fechaCancelacion).sizeInDays();
-            if (diasHastaReserva <= 7) return 1.0;
-            else return 0.5;
-        } else return 0;
+            int diasHastaReserva = new DateLapse(fechaCancelacion, fechaReserva).sizeInDays();
+            if (diasHastaReserva >= 7) return 1.0;
+            else if (diasHastaReserva >= 2) return 0.5;
+        }
+        return 0;
     }
 }

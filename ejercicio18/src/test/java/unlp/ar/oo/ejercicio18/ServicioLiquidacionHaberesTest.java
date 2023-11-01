@@ -19,14 +19,15 @@ class ServicioLiquidacionHaberesTest {
     void setUp() throws Exception {
         servicio = new ServicioLiquidacionHaberes();
         empleado = new Empleado("Julian", "Perez", 1000, LocalDate.of(2005, 1, 1), false, false);
-        Contrato contratoPorHora = new ContratoPorHora(LocalDate.of(2020, 1, 1), LocalDate.of(2021, 1, 1), 100, 10);
+        Contrato contratoPorHora = new ContratoPorHora(empleado, LocalDate.of(2020, 1, 1), LocalDate.of(2021, 1, 1), 100, 10);
         empleado.agregarContrato(contratoPorHora);
     }
 
     @Test
     void testAgregarEmpleado() {
         assertEquals(0, servicio.cantidadEmpleados());
-        servicio.agregarEmpleado("Javier", "Gomez", 2000, LocalDate.of(2000, 1, 1), false, false);
+        Empleado empleado = new Empleado("Javier", "Gomez", 2000, LocalDate.of(2000, 1, 1), false, false);
+        servicio.agregarEmpleado(empleado);
         assertEquals(1, servicio.cantidadEmpleados());
     }
 

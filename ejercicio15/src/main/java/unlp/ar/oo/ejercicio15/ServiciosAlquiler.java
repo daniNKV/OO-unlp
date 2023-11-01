@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class ServiciosAlquiler {
     private Set<Usuario> usuarios;
 
-    private ServiciosAlquiler() {
+    public ServiciosAlquiler() {
         this.usuarios = new HashSet<>();
     }
 
