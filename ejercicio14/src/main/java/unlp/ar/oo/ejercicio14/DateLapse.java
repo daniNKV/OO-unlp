@@ -26,12 +26,16 @@ public class DateLapse {
         return (int) DAYS.between(fromDate, toDate);
     }
 
-    public boolean includesDate(LocalDate other) {
-        return fromDate.isBefore(other) && toDate.isAfter(other);
+    public boolean includesDate(LocalDate otherDate) {
+        return fromDate.isBefore(otherDate) && toDate.isAfter(otherDate);
     }
 
-    public boolean overlaps() {
-        return true;
+    public boolean overlaps(DateLapse lapse) {
+        return this.includesDate(lapse.getFrom())
+                || this.includesDate(lapse.getTo())
+                || lapse.includesDate(this.fromDate)
+                || lapse.includesDate(this.toDate)
+                || (this.fromDate.isEqual(lapse.getFrom()) && this.toDate.isEqual(lapse.toDate));
     }
 
 }
