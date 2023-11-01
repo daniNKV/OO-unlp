@@ -29,4 +29,13 @@ public class Reserva {
         DateLapse lapso = new DateLapse(this.desdeFecha, this.hastaFecha);
         return lapso.sizeInDays() * propiedad.getPrecioPorNoche();
     }
+    public void eliminar() {
+        this.propiedad.eliminarReserva(this);
+        this.inquilino.eliminarReserva(this);
+    }
+    public double calcularReembolso(LocalDate fechaTentativa) {
+        double porcentajeReembolso;
+        porcentajeReembolso = propiedad.getPolitica().calcularPorcentajeReembolso(desdeFecha, fechaTentativa);
+        return precioTotal() * porcentajeReembolso;
+    }
 }

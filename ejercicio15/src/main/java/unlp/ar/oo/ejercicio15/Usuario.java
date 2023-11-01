@@ -11,17 +11,17 @@ public class Usuario {
     private Integer dni;
     private String direccion;
     private Set<Propiedad> propiedades;
-    private HistorialReservas reservasRealizadas;
+    private Set<Reserva> reservasRealizadas;
     public Usuario(String nombre, Integer dni, String direccion) {
         this.nombre = nombre;
         this.dni = dni;
         this.direccion = direccion;
-        this.reservasRealizadas = new HistorialReservas();
+        this.reservasRealizadas = new HashSet<>();
         this.propiedades = new HashSet<>();
     }
 
     public List<Reserva> getReservas() {
-        return reservasRealizadas.getReservas();
+        return reservasRealizadas.stream().toList();
     }
 
     public void agregarPropiedad(Propiedad propiedad) {
@@ -29,7 +29,10 @@ public class Usuario {
     }
 
     public void agregarReserva(Reserva reserva) {
-        this.reservasRealizadas.agregar(reserva);
+        this.reservasRealizadas.add(reserva);
+    }
+    public void eliminarReserva(Reserva reserva) {
+        this.reservasRealizadas.remove(reserva);
     }
 
     public double calcularIngresos(LocalDate desde, LocalDate hasta) {

@@ -13,12 +13,8 @@ public class ServiciosAlquiler {
         this.usuarios = new HashSet<>();
     }
 
-    public void registrarUsuario(String nombre, Integer dni, String direccion) {
-        this.usuarios.add(new Usuario(nombre, dni, direccion));
-    }
-
-    public List<Reserva> obtenerReservasInquilino(Usuario inquilino) {
-        return inquilino.getReservas();
+    public void registrarUsuario(Usuario usuario) {
+        this.usuarios.add(usuario);
     }
 
     public List<Propiedad> buscarPropiedadesDisponibles(LocalDate desde, LocalDate hasta) {

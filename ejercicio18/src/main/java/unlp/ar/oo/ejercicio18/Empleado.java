@@ -50,18 +50,6 @@ public class Empleado {
         return tieneHijos;
     }
 
-    public void agregarContrato(LocalDate fechaInicio, double montoMensual, double montoPorConyuge, double montoPorHijos) {
-        if (!this.tieneContratoActivo()) {
-            this.contratos.add(new ContratoDePlanta(fechaInicio, montoMensual, montoPorConyuge, montoPorHijos));
-        }
-    }
-
-    public void agregarContrato(LocalDate fechaInicio, LocalDate fechaFin, double montoPorHora, Integer horasPorMes) {
-        if (!this.tieneContratoActivo()) {
-            this.contratos.add(new ContratoPorHora(fechaInicio, fechaFin, montoPorHora, horasPorMes));
-        }
-    }
-
     public void agregarContrato(Contrato contrato) {
         if (!this.tieneContratoActivo()) {
             this.contratos.add(contrato);

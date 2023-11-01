@@ -1,7 +1,10 @@
 package unlp.ar.oo.ejercicio15;
 
+import unlp.ar.oo.ejercicio14.DateLapse;
+
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.Set;
 
 public class Propiedad {
     private String nombre;
@@ -10,7 +13,7 @@ public class Propiedad {
     private double precioPorNoche;
     private Usuario propietario;
     private PoliticaCancelacion politica;
-    private HistorialReservas reservasRecibidas;
+    private Set<Reserva> reservasRecibidas;
 
     public Propiedad(String nombre,
                      String descripcion,
@@ -24,7 +27,7 @@ public class Propiedad {
         this.precioPorNoche = precioPorNoche;
         this.politica = politica;
         this.propietario = propietario;
-        this.reservasRecibidas = new HistorialReservas();
+        this.reservasRecibidas = new HashSet<>();
     }
 
     public String getNombre() {
@@ -43,19 +46,30 @@ public class Propiedad {
         return precioPorNoche;
     }
 
+    public PoliticaCancelacion getPolitica() {
+        return politica;
+    }
+
     public void eliminarReserva(Reserva reserva) {
-        this.reservasRecibidas.eliminar(reserva);
+        this.reservasRecibidas.remove(reserva);
     }
 
     public void agregarReserva(Reserva reserva) {
-        this.reservasRecibidas.agregar(reserva);
+        this.reservasRecibidas.add(reserva);
     }
 
     public double recaudacionEntreFechas(LocalDate desde, LocalDate hasta) {
-        return 0.0;
+        DateLapse lapsoACalcular = new DateLapse(desde, hasta);
+        return reservasRecibidas.stream()
+                .filter(reserva -> new DateLapse(reserva.desdeFecha, reserva.hastaFecha).overlaps(lapsoACalcular))
+                .mapToDouble(Reserva::precioTotal)
+                .sum();
     }
 
     public boolean estaLibre(LocalDate desde, LocalDate hasta) {
-        return false;
+        DateLapse lapsoReserva = new DateLapse(desde, hasta);
+        return reservasRecibidas.stream()
+                .noneMatch(reserva -> new DateLapse(reserva.desdeFecha, reserva.hastaFecha).overlaps(lapsoReserva));
     }
+
 }

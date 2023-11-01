@@ -19,7 +19,8 @@ class ServicioLiquidacionHaberesTest {
     void setUp() throws Exception {
         servicio = new ServicioLiquidacionHaberes();
         empleado = new Empleado("Julian", "Perez", 1000, LocalDate.of(2005, 1, 1), false, false);
-        empleado.agregarContrato(LocalDate.of(2020, 1, 1), LocalDate.of(2021, 1, 1), 100, 10);
+        Contrato contratoPorHora = new ContratoPorHora(LocalDate.of(2020, 1, 1), LocalDate.of(2021, 1, 1), 100, 10);
+        empleado.agregarContrato(contratoPorHora);
     }
 
     @Test
