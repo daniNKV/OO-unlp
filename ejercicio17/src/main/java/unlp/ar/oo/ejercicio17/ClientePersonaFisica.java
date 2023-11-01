@@ -17,14 +17,9 @@ public class ClientePersonaFisica extends Cliente {
 
 
     @Override
-    public Factura facturarLlamadas(LocalDate fechaDesde, LocalDate fechaHasta, CuadroTarifario tarifas) {
-        List<Llamada> llamadasRealizadas = this.getNumero().getLlamadasRealizadas(fechaDesde, fechaHasta);
-        double montoLlamadas = llamadasRealizadas.stream()
-                .mapToDouble(Llamada::calcularCosto)
-                .sum();
-        double montoAFacturar = montoLlamadas - montoLlamadas * 0.1;
-
-        return new Factura(this, LocalDate.now(), fechaDesde, fechaHasta, montoAFacturar);
+    public double calcularMontoAFacturar(double montoTotal) {
+        double porcentajeDescuento = 0.1;
+        return montoTotal - montoTotal * porcentajeDescuento;
 
     }
 }

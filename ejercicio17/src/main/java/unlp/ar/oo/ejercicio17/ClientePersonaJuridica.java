@@ -5,19 +5,17 @@ import java.util.List;
 
 public class ClientePersonaJuridica extends Cliente {
     private Integer cuil;
+    private String tipoPersonaJuridica;
 
-    public ClientePersonaJuridica(String nombre, String direccion, NumeroTelefonico numero, Integer cuil) {
+    public ClientePersonaJuridica(String nombre, String direccion, NumeroTelefonico numero, String tipo, Integer cuil) {
         super(nombre, direccion, numero);
         this.cuil = cuil;
+        this.tipoPersonaJuridica = tipo;
     }
 
     @Override
-    public Factura facturarLlamadas(LocalDate fechaDesde, LocalDate fechaHasta, CuadroTarifario tarifas) {
-        List<Llamada> llamadasRealizadas = this.getNumero().getLlamadasRealizadas(fechaDesde, fechaHasta);
-        double montoAFacturar = llamadasRealizadas.stream()
-                .mapToDouble(Llamada::calcularCosto)
-                .sum();
-        return new Factura(this, LocalDate.now(), fechaDesde, fechaHasta, montoAFacturar);
+    public double calcularMontoAFacturar(double montoTotal) {
+        return montoTotal;
     }
 
 }

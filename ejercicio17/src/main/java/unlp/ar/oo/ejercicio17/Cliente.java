@@ -1,6 +1,7 @@
 package unlp.ar.oo.ejercicio17;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public abstract class Cliente {
     private String nombre;
@@ -21,10 +22,19 @@ public abstract class Cliente {
         return direccion;
     }
 
+    public void agregarNumeroTelefonico(NumeroTelefonico numero) {
+        this.numero = numero;
+    }
+
     public NumeroTelefonico getNumero() {
         return numero;
     }
 
-    protected abstract Factura facturarLlamadas(LocalDate fechaDesde, LocalDate fechaHasta, CuadroTarifario tarifas);
+    public Factura facturarLlamadas(LocalDate fechaDesde, LocalDate fechaHasta, CuadroTarifario tarifas) {
+        double montoTotal = this.numero.calcularMontoLlamadas(fechaDesde, fechaHasta, tarifas);
+        return new Factura(this, LocalDate.now(), fechaDesde, fechaHasta, calcularMontoAFacturar(montoTotal));
+    }
+
+    protected abstract double calcularMontoAFacturar(double montoTotal);
 
 }

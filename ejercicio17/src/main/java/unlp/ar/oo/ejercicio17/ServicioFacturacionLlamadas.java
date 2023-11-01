@@ -7,18 +7,10 @@ public class ServicioFacturacionLlamadas {
     private Stack<NumeroTelefonico> numerosDisponibles;
     private Set<Cliente> clientes;
 
-    public Cliente agregarClienteIndividuo(String nombre, String direccion, Integer dni) {
+    public void agregarCliente(Cliente cliente) {
         NumeroTelefonico numero = numerosDisponibles.pop();
-        Cliente nuevoCliente = new ClientePersonaFisica(nombre, direccion,numero, dni);
-        this.clientes.add(nuevoCliente);
-        return nuevoCliente;
-    }
-
-    public Cliente agregarClientePersonaJuridica(String nombre, String direccion, Integer cuil) {
-        NumeroTelefonico numero = numerosDisponibles.pop();
-        Cliente nuevoCliente = new ClientePersonaJuridica(nombre, direccion, numero, cuil);
-        this.clientes.add(nuevoCliente);
-        return nuevoCliente;
+        cliente.agregarNumeroTelefonico(numero);
+        this.clientes.add(cliente);
     }
 
     public void agregarNumeroDisponible(NumeroTelefonico numero) {
