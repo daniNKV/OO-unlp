@@ -33,7 +33,9 @@ public class NumeroTelefonico {
 
     private List<Llamada> getLlamadasRealizadas(LocalDate fechaDesde, LocalDate fechaHasta) {
         return this.getLlamadasRealizadas().stream()
-                .filter(llamada -> llamada.getFecha().isAfter(fechaDesde) || llamada.getFecha().isBefore(fechaHasta))
+                .filter(llamada ->
+                        (llamada.getFecha().isAfter(fechaDesde) || llamada.getFecha().isEqual(fechaDesde)) &&
+                        (llamada.getFecha().isBefore(fechaHasta)) || llamada.getFecha().isEqual(fechaHasta))
                 .collect(Collectors.toList());
     }
 

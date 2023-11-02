@@ -10,7 +10,7 @@ public class LlamadaLocal extends Llamada {
 
     @Override
     public double calcularCosto() {
-        double costoConexion = 1.0;
-        return this.getDuracion() * costoConexion;
+        double costoPorMinuto = 1.0;
+        return this.getDuracion() * costoPorMinuto;
     }
 }
